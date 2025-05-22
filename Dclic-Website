@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DClic - Conseiller et Assistant Numérique à Saint Mont (32) | Dépannage Informatique Gers</title>
+    <meta name="description" content="DClic, votre conseiller et assistant numérique à Saint Mont (Gers). Dépannage, maintenance, formation et assistance informatique à domicile dans le Gers. Intervention 7j/7.">
+    <meta name="keywords" content="dépannage informatique, assistance informatique, formation numérique, saint mont, gers, 32, maintenance ordinateur, conseiller numérique">
+    <meta name="author" content="DClic">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="DClic - Conseiller et Assistant Numérique à Saint Mont (32)">
+    <meta property="og:description" content="Dépannage, maintenance, formation et assistance informatique à domicile dans tout le Gers. Services personnalisés pour particuliers et professionnels.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.dclic-gers.fr">
+    <meta property="og:image" content="https://www.dclic-gers.fr/images/logo-dclic.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DClic - Conseiller et Assistant Numérique dans le Gers">
+    <meta name="twitter:description" content="Dépannage, maintenance, formation et assistance informatique à domicile dans tout le Gers.">
+    <link rel="canonical" href="https://www.dclic-gers.fr">
+    <link rel="alternate" hreflang="fr" href="https://www.dclic-gers.fr">
+    <style>
+        :root {
+            --primary: #0b3d91;
+            --secondary: #1e88e5;
+            --light: #bbdefb;
+            --dark: #0a2463;
+            --accent: #64b5f6;
+            --text: #212121;
+            --background: #f5f9ff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: slideUp 1s ease-in-out forwards;
+            animation-delay: 0.5s;
+        }
+        
+        nav {
+            background-color: var(--dark);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+            height: auto;
+        }
+        
+        nav.hidden {
+            transform: translateY(-100%);
+        }
+        
+        nav.compact {
+            padding: 0;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            padding: 0.5rem;
+            transition: padding 0.3s ease;
+        }
+        
+        .nav-container.compact {
+            padding: 0;
+        }
+        
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1rem;
+            transition: all 0.3s ease, padding 0.3s ease;
+            border-radius: 4px;
+        }
+        
+        .nav-item.compact {
+            padding: 0.4rem 0.7rem;
+            font-size: 0.9rem;
+        }
+        
+        .nav-item:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        section {
+            margin: 4rem 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        h2:hover::after {
+            width: 100%;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--light) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+        }
+        
+        .service-card:hover::before {
+            opacity: 0.6;
+        }
+        
+        .service-card h3 {
+            color: var(--dark);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-card p {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .tech-item {
+            background: white;
+            border-radius: 30px;
+            padding: 0.7rem 1.2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-left: 3px solid var(--accent);
+        }
+        
+        .tech-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            background-color: var(--light);
+        }
+        
+        .ai-section {
+            background: linear-gradient(135deg, var(--light) 0%, white 100%);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+        
+        .safety-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .safety-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border-top: 3px solid var(--primary);
+        }
+        
+        .safety-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-info {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item i {
+            margin-right: 1rem;
+            color: var(--primary);
+        }
+        
+        .hours-container {
+            margin-top: 2rem;
+        }
+        
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .day-card {
+            background: var(--light);
+            border-radius: 5px;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .day-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .day-name {
+            font-weight: bold;
+            color: var(--dark);
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border-radius: 50%;
+            color: var(--primary);
+            text-decoration: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+            background-color: var(--light);
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Breadcrumbs */
+        .breadcrumbs {
+            margin: 1rem 0;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumbs a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Structured data markup */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Animation pour les particules */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .particle {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: float 20s infinite linear;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100vw);
+                opacity: 0;
+            }
+        }
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-item {
+                margin: 0.3rem 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            section {
+                margin: 2rem 0;
+            }
+            
+            .ai-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    <!-- Données structurées JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "DClic",
+      "description": "Conseiller et assistant numérique proposant des services de dépannage, maintenance, conseil, formation et assistance informatique à domicile dans le Gers.",
+      "image": "https://www.dclic-gers.fr/images/logo-dclic.jpg",
+      "url": "https://www.dclic-gers.fr",
+      "telephone": "0659849342",
+      "email": "Dclic@Proton.me",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2704 Chemin de las Claux",
+        "addressLocality": "SAINT MONT",
+        "postalCode": "32400",
+        "addressRegion": "Gers",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "43.6667",
+        "longitude": "0.1667"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Wednesday", "Saturday"],
+          "opens": "08:00",
+          "closes": "12:00"
+        }
+      ],
+      "priceRange": "€€",
+      "servesCuisine": "Prestations informatiques",
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "43.6446",
+          "longitude": "0.5871"
+        },
+        "geoRadius": "50000"
+      },
+      "sameAs": [
+        "https://www.facebook.com/dclicgers",
+        "https://www.linkedin.com/company/dclic-gers"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="particles" id="particles"></div>
+        <h1>DClic - Conseiller et Assistant Numérique</h1>
+        <div class="tagline">Votre expert informatique à domicile dans le Gers (32)</div>
+    </header>
+    
+    <nav aria-label="Navigation principale">
+        <div class="nav-container">
+            <a href="#services" class="nav-item">Services</a>
+            <a href="#pedagogie" class="nav-item">Pédagogie</a>
+            <a href="#securite" class="nav-item">Sécurité</a>
+            <a href="#technologie" class="nav-item">Nouvelles Technologies</a>
+            <a href="#contact" class="nav-item">Contact</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumbs" aria-label="fil d'Ariane">
+            <span itemscope itemtype="https://schema.org/BreadcrumbList">
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="/" itemprop="item"><span itemprop="name">Accueil</span></a>
+                    <meta itemprop="position" content="1" />
+                </span> &gt;
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">Services informatiques</span>
+                    <meta itemprop="position" content="2" />
+                </span>
+            </span>
+        </div>
+        
+        <section id="intro">
+            <h2>Dépannage et assistance informatique à domicile dans le Gers</h2>
+            <p>DClic est votre partenaire de confiance pour tous vos besoins informatiques à Saint Mont et dans tout le département du Gers. Que vous soyez particulier ou professionnel, nous intervenons directement chez vous pour résoudre vos problèmes informatiques, assurer la maintenance de vos équipements et vous former aux outils numériques.</p>
+            <p>Notre engagement : vous proposer des solutions adaptées à vos besoins spécifiques, avec clarté, transparence et efficacité.</p>
+        </section>
+        
+        <section id="services" class="services-section">
+            <h2>Nos Services Informatiques dans le Gers</h2>
+            <p>En tant que conseiller et assistant numérique, DClic vous propose une gamme complète de services informatiques à domicile pour répondre à tous vos besoins numériques dans le département du Gers :</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Analyse de Documents</h3>
+                    <p>Nous analysons vos documents numériques pour optimiser leur organisation, leur sécurité et leur accessibilité. Service adapté aux particuliers et professionnels du Gers.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Assistance Matériel Informatique</h3>
+                    <p>Un problème avec votre ordinateur, tablette ou smartphone ? Nous intervenons rapidement à Saint Mont et dans tout le Gers pour diagnostiquer et résoudre tous vos problèmes matériels.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Dépannage Informatique</h3>
+                    <p>Résolution des problèmes informatiques : virus, lenteurs, bugs, erreurs système et autres dysfonctionnements. Intervention à domicile dans le Gers pour un service rapide et efficace.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Réparation Ordinateur</h3>
+                    <p>Réparation de matériel informatique défectueux pour prolonger la durée de vie de vos équipements. Service disponible à Saint Mont et dans tout le département du Gers (32).</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Installation Logiciel et Matériel</h3>
+                    <p>Installation et configuration de nouveaux matériels, logiciels et périphériques pour un fonctionnement optimal. Service à domicile dans le Gers pour particuliers et entreprises.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Maintenance Informatique</h3>
+                    <p>Entretien régulier de vos équipements pour prévenir les pannes et optimiser leurs performances. Maintenance préventive et curative dans le Gers.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Configuration Système et Réseau</h3>
+                    <p>Paramétrage personnalisé de vos appareils et réseaux selon vos besoins spécifiques pour une utilisation simplifiée. Service adapté aux foyers et petites entreprises du Gers.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Mise à jour Logiciel et Système</h3>
+                    <p>Actualisation de vos systèmes, logiciels et applications pour bénéficier des dernières fonctionnalités et correctifs de sécurité. Service essentiel pour maintenir vos appareils en bon état.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="pedagogie" class="pedagogy-section">
+            <h2>Formation et Accompagnement Numérique dans le Gers</h2>
+            <p>DClic s'engage à vous accompagner dans l'apprentissage et la maîtrise des outils numériques avec une approche pédagogique adaptée à vos besoins. Nos formations sont disponibles à Saint Mont et dans tout le département du Gers :</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Formation Informatique Personnalisée</h3>
+                    <p>Des formations sur mesure adaptées à votre niveau, vos besoins et votre rythme d'apprentissage. Idéal pour les seniors et débutants dans le Gers souhaitant gagner en autonomie numérique.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Découverte des Outils Numériques</h3>
+                    <p>Initiation aux différents outils numériques : ordinateurs, tablettes, smartphones, applications, logiciels. Formations accessibles à tous les habitants du Gers.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Ateliers Pratiques Informatiques</h3>
+                    <p>Sessions pratiques pour maîtriser les fonctionnalités essentielles des technologies que vous utilisez au quotidien. Ateliers à domicile dans le Gers ou en petits groupes.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Suivi Personnalisé Informatique</h3>
+                    <p>Accompagnement continu pour répondre à vos questions et vous aider à progresser dans votre autonomie numérique. Un service de proximité dans le Gers pour un apprentissage serein.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="securite" class="security-section">
+            <h2>Sécurité Numérique et Protection des Données</h2>
+            <p>Dans un monde de plus en plus connecté, la sécurité de vos données est primordiale. DClic vous sensibilise aux bonnes pratiques et à la législation pour protéger vos informations personnelles dans le Gers :</p>
+            
+            <div class="safety-grid">
+                <div class="safety-card">
+                    <h3>Protection des Données Personnelles</h3>
+                    <p>Conseils et solutions pour sécuriser vos informations personnelles et professionnelles contre les cybermenaces. Service essentiel pour les particuliers et entreprises du Gers.</p>
+                </div>
+                
+                <div class="safety-card">
+                    <h3>Confidentialité en Ligne et Sécurité Internet</h3>
+                    <p>Stratégies pour préserver votre vie privée sur internet et limiter l'exploitation de vos données personnelles. Protection adaptée aux besoins des habitants du Gers.</p>
+                </div>
+                
+                <div class="safety-card">
+                    <h3>Conformité RGPD et Législation</h3>
+                    <p>Information sur la législation en vigueur concernant la protection des données et la conformité aux règles européennes. Conseils adaptés aux professionnels du Gers.</p>
+                </div>
+                
+                <div class="safety-card">
+                    <h3>Sécurisation des Comptes et Mots de Passe</h3>
+                    <p>Mise en place de mesures de protection pour vos comptes en ligne : mots de passe sécurisés, authentification à deux facteurs. Service préventif pour tous les usagers numériques du Gers.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="technologie" class="tech-section">
+            <h2>Nouvelles Technologies et Innovation Numérique</h2>
+            <p>Restez informé sur les dernières avancées technologiques et préparez-vous aux innovations qui transforment notre quotidien. DClic vous accompagne dans cette évolution numérique dans le Gers :</p>
+            
+            <div class="tech-list">
+                <div class="tech-item">Intelligence Artificielle</div>
+                <div class="tech-item">Objets Connectés</div>
+                <div class="tech-item">Cloud Computing</div>
+                <div class="tech-item">Réalité Virtuelle</div>
+                <div class="tech-item">Sécurité Informatique</div>
+                <div class="tech-item">Automatisation</div>
+                <div class="tech-item">Big Data</div>
+                <div class="tech-item">Blockchain</div>
+            </div>
+            
+            <div class="ai-section">
+                <h3>L'ère de l'Intelligence Artificielle dans le Gers</h3>
+                <p>L'intelligence artificielle révolutionne notre rapport à la technologie et transforme de nombreux secteurs. DClic vous aide à comprendre ses applications, ses avantages et ses implications pour les habitants et entreprises du Gers :</p>
+                
+                <ul style="margin-top: 1rem; margin-left: 2rem;">
+                    <li>Découverte des outils d'IA accessibles au grand public dans le Gers</li>
+                    <li>Formation à l'utilisation responsable des assistants virtuels</li>
+                    <li>Conseils pour intégrer l'IA dans vos activités quotidiennes et professionnelles</li>
+                    <li>Sensibilisation aux enjeux éthiques et aux limites de cette technologie</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="zone-intervention">
+            <h2>Zone d'intervention dans le Gers</h2>
+            <p>DClic intervient à domicile dans tout le département du Gers (32), notamment à :</p>
+            <p>Saint Mont, Auch, Condom, Mirande, Eauze, Vic-Fezensac, L'Isle-Jourdain, Nogaro, Plaisance, Fleurance, Lectoure, Samatan, Marciac, Riscle, Cazaubon et toutes les communes environnantes.</p>
+            <p>Déplacement rapide et intervention à domicile pour tous vos besoins informatiques.</p>
+        </section>
+        
+        <section id="contact" class="contact-section">
+            <h2>Contacter votre assistant numérique dans le Gers</h2>
+            
+            <div class="contact-info">
+                <div class="contact-grid">
+                    <div>
+                        <div class="contact-item">
+                            <i>✉️</i>
+                            <span>Email : <a href="mailto:Dclic@Proton.me">Dclic@Proton.me</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <i>📱</i>
+                            <span>Téléphone : <a href="tel:+33659849342">06 59 84 93 42</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <i>📍</i>
+                            <span>Adresse : 2704 Chemin de las Claux, 32400 SAINT MONT</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="contact-item">
+                            <i>🏢</i>
+                            <span>Entreprise : EI Dclic - Siret 51108827000026</span>
+                        </div>
+                        <div class="contact-item">
+                            <i>📊</i>
+                            <span>Code APE : 8552Z</span>
+                        </div>
+                        <div class="contact-item">
+                            <i>🖥️</i>
+                            <span>Activités TIC (dépannage, maintenance, conseil, animation, formation informatique)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hours-container">
+                    <h3>Horaires d'ouverture - Service informatique à domicile</h3>
+                    <div class="hours-grid">
+                        <div class="day-card">
+                            <div class="day-name">Lundi</div>
+                            <div>8h-12h</div>
+                            <div>14h-18h</div>
+                        </div>
+                        <div class="day-card">
+                            <div class="day-name">Mardi</div>
+                            <div>8h-12h</div>
+                            <div>14h-18h</div>
+                        </div>
+                        <div class="day-card">
+                            <div class="day-name">Mercredi</div>
+                            <div>8h-12h</div>
+                            <div>Fermé l'après-midi</div>
+                        </div>
+                        <div class="day-card">
+                            <div class="day-name">Jeudi</div>
+                            <div>8h-12h</div>
+                            <div>14h-18h</div>
+                        </div>
+                        <div class="day-card">
+                            <div class="day-name">Vendredi</div>
+                            <div>8h-12h</div>
+                            <div>14h-18h</div>
+                        </div>
+                        <div class="day-card">
+                            <div class="day-name">Samedi</div>
+                            <div>8h-12h</div>
+                            <div>Fermé l'après-midi</div>
+                        </div>
+                    </div>
+                    <p><em>Interventions d'urgence possibles sur rendez-vous en dehors des horaires d'ouverture dans tout le Gers.</em></p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="faq">
+            <h2>Questions fréquentes - Dépannage informatique Gers</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Combien coûte une intervention à domicile dans le Gers ?</h3>
+                    <p>Nos tarifs sont transparents et adaptés à chaque intervention. Devis gratuit par téléphone ou email. Pas de frais cachés, tarification claire pour tous nos services dans le Gers.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Dans quels délais intervenez-vous ?</h3>
+                    <p>Nous intervenons généralement sous 24-48h dans tout le Gers. Pour les urgences, possibilité d'intervention le jour même à Saint Mont et communes proches.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Quelles marques d'ordinateurs réparez-vous ?</h3>
+                    <p>Nous intervenons sur toutes marques : HP, Dell, Asus, Acer, Lenovo, Apple, etc. PC portable, ordinateur fixe, Mac - intervention à domicile dans le Gers.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Proposez-vous des formations pour seniors ?</h3>
+                    <p>Oui, nous proposons des formations spécialement adaptées aux seniors : internet, email, tablette, smartphone. Pédagogie adaptée et patience garantie dans le Gers.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 DClic - Tous droits réservés | Dépannage informatique à domicile dans le Gers</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/dclicgers" class="social-icon" aria-label="Facebook DClic" rel="noopener">f</a>
+                <a href="https://www.linkedin.com/company/dclic-gers" class="social-icon" aria-label="LinkedIn DClic" rel="noopener">in</a>
+                <a href="#" class="social-icon" aria-label="Twitter DClic" rel="noopener">t</a>
+            </div>
+            <p>Intervention à domicile sur tous les services informatiques dans le Gers (32)</p>
+            <p>Saint Mont • Auch • Condom • Mirande • Eauze • Vic-Fezensac • L'Isle-Jourdain</p>
+        </div>
+    </footer>
+    
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Retour en haut de page">↑</a>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Combien coûte une intervention à domicile dans le Gers ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nos tarifs sont transparents et adaptés à chaque intervention. Devis gratuit par téléphone ou email. Pas de frais cachés, tarification claire pour tous nos services dans le Gers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dans quels délais intervenez-vous ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nous intervenons généralement sous 24-48h dans tout le Gers. Pour les urgences, possibilité d'intervention le jour même à Saint Mont et communes proches."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelles marques d'ordinateurs réparez-vous ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nous intervenons sur toutes marques : HP, Dell, Asus, Acer, Lenovo, Apple, etc. PC portable, ordinateur fixe, Mac - intervention à domicile dans le Gers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous des formations pour seniors ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, nous proposons des formations spécialement adaptées aux seniors : internet, email, tablette, smartphone. Pédagogie adaptée et patience garantie dans le Gers."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script>
+        // Créer des particules pour l'animation de l'en-tête
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 20;
+        
+        if (particlesContainer) {
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Taille aléatoire
+                const size = Math.random() * 10 + 5;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Position initiale aléatoire
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                
+                // Durée d'animation aléatoire
+                const duration = Math.random() * 15 + 10;
+                particle.style.animationDuration = `${duration}s`;
+                
+                // Délai aléatoire
+                const delay = Math.random() * 10;
+                particle.style.animationDelay = `${delay}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Animation des sections au défilement
+        const sections = document.querySelectorAll('section');
+        const backToTop = document.getElementById('backToTop');
+        const navbar = document.querySelector('nav');
+        const navItems = document.querySelectorAll('.nav-item');
+        const navContainer = document.querySelector('.nav-container');
+        
+        let lastScrollTop = 0;
+        
+        function checkVisibility() {
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                
+                if (rect.top < windowHeight * 0.8) {
+                    section.classList.add('visible');
+                }
+            });
+            
+            // Afficher/masquer le bouton "Retour en haut"
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+            
+            // Gérer la barre de navigation
+            const currentScrollTop = window.scrollY;
+            
+            if (currentScrollTop > 100) {
+                // Compacter la navbar quand on scrolle
+                navbar.classList.add('compact');
+                navContainer.classList.add('compact');
+                navItems.forEach(item => item.classList.add('compact'));
+                
+                // Masquer la navbar quand on scrolle vers le bas
+                if (currentScrollTop > lastScrollTop && currentScrollTop > 300) {
+                    navbar.classList.add('hidden');
+                } else {
+                    navbar.classList.remove('hidden');
+                }
+            } else {
+                // Remettre la navbar normale quand on est en haut
+                navbar.classList.remove('compact');
+                navContainer.classList.remove('compact');
+                navItems.forEach(item => item.classList.remove('compact'));
+            }
+            
+            lastScrollTop = currentScrollTop;
+        }
+        
+        // Vérifier la visibilité au chargement
+        window.addEventListener('load', checkVisibility);
+        
+        // Vérifier la visibilité au défilement
+        window.addEventListener('scroll', checkVisibility);
+        
+        // Navigation fluide
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                
+                if (targetId === '#') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Gestion des erreurs JavaScript
+        window.addEventListener('error', function(e) {
+            console.log('Erreur JavaScript:', e.error);
+        });
+    </script>
+</body>
+</html>
